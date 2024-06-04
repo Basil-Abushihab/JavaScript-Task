@@ -1,0 +1,46 @@
+$siteColor: #ffd0d0;
+$generalFontSize: 1rem;
+
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  background-color: $siteColor;
+
+  .logo {
+    max-width: max-content;
+    width: 5%;
+    margin-right: 5%;
+    @media (max-width: 720px) {
+      width: 10%;
+    }
+  }
+  .nav-items {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 50%;
+    opacity: 0.5;
+    align-items: center;
+    list-style-type: none;
+    font-weight: bold;
+    li {
+      font-size: 1.2rem;
+      color: rgb(54, 54, 54);
+      display: inline-block;
+
+      opacity: 0.5;
+      transition: opacity 300ms;
+      &:hover::after {
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 720px) {
+      display: none;
+    }
+  }
+}
