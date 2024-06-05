@@ -1,12 +1,23 @@
+function checkGender() {
+  while (true) {
+    var gender = prompt("Please enter your gender").toLowerCase();
+    if (gender == "male" || gender == "female") {
+      if (gender == "male") alert("welcome, Mr. " + visitorName);
+      else if (gender == "female") alert("welcome, Miss " + visitorName);
+      else alert("welcome, " + visitorName);
+      break;
+    } else {
+      alert("Please ReEnter gender");
+    }
+  }
+}
+
 let text = prompt("Enter your Name");
 let visitorName = text ? text : "Stranger";
 if (visitorName == "Stranger") {
   alert("Welcome,  " + visitorName);
 } else {
-  let gender = prompt("Please enter your gender");
-  if (gender == "Male") alert("welcome, Mr. " + visitorName);
-  else if (gender == "Female") alert("welcome, Miss " + visitorName);
-  else alert("welcome, " + visitorName);
+  checkGender();
 }
 
 let orderType = prompt(
@@ -26,6 +37,10 @@ console.log(
     order
 );
 
+let customer = new Array(visitorName, gender, orderType, order);
+for (let i = 0; i < customer.length; i++) {
+  console.log(customer[i]);
+}
 //Evaluate the following expressions
 
 console.log(-5 * 3);
