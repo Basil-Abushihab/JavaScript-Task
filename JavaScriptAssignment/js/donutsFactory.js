@@ -1,6 +1,7 @@
 function checkGender() {
+  var gender;
   while (true) {
-    var gender = prompt("Please enter your gender").toLowerCase();
+    gender = prompt("Please enter your gender").toLowerCase();
     if (gender == "male" || gender == "female") {
       if (gender == "male") alert("welcome, Mr. " + visitorName);
       else if (gender == "female") alert("welcome, Miss " + visitorName);
@@ -10,14 +11,15 @@ function checkGender() {
       alert("Please ReEnter gender");
     }
   }
+  return gender;
 }
-
+let gender;
 let text = prompt("Enter your Name");
 let visitorName = text ? text : "Stranger";
 if (visitorName == "Stranger") {
   alert("Welcome,  " + visitorName);
 } else {
-  checkGender();
+  gender = checkGender();
 }
 
 let orderType = prompt(
@@ -28,14 +30,17 @@ let order = prompt("Please write what you would like to order");
 
 alert("Your order is being prepared");
 
-console.log(
-  "Orderer Name: " +
-    visitorName +
-    "\n Order type: " +
-    orderType +
-    "\n order: " +
-    order
-);
+function displayUserInfo() {
+  let userData = document.getElementById("user-data");
+  let userName = document.getElementById("name");
+  let userInfo = userData.querySelectorAll("li");
+  console.log(userInfo);
+  userName.innerText = visitorName;
+  userInfo[0].innerText = "gender: " + gender;
+  userInfo[1].innerText = "order Type: " + orderType;
+  userInfo[2].innerText = "order: " + order;
+}
+displayUserInfo();
 
 let customer = new Array(visitorName, gender, orderType, order);
 for (let i = 0; i < customer.length; i++) {
