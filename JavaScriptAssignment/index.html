@@ -77,20 +77,7 @@
             <h1 class="text-white font-weight-bold">
               Welcome to Donuts Factory
             </h1>
-            <p id="name"></p>
-            <div id="user-data">
-              <ul>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
-              </ul>
-            </div>
+            <section></section>
             <hr class="divider" />
           </div>
           <div class="col-lg-8 align-self-baseline">
@@ -105,6 +92,48 @@
         </div>
       </div>
     </header>
+    <section style="display: grid; justify-content: center">
+      <form id="form">
+        <label>UserName</label>
+        <br />
+        <br />
+        <input type="text" name="userName" />
+        <br />
+        <br />
+        <label>Age</label>
+        <br /><br />
+        <input type="text" name="age" />
+        <br /><br />
+        <label>Gender</label>
+        <br /><br />
+        <input type="radio" name="Gender" id="male" value="Male" />Male <br />
+        <input type="radio" name="Gender" id="female" value="Female" />Female
+        <br /><br />
+        <label>order type</label><br /><br />
+        <input type="text" name="orderType" id="orderType" />
+        <br /><br />
+        <label>Drink choice</label> <br /><br />
+        <input type="radio" name="Hot-Cold" id="hot-cold-radio" value="Hot" />
+        Hot
+        <br />
+        <input
+          type="radio"
+          name="Hot-Cold"
+          id="hot-cold-radio"
+          value="Cold"
+        />Cold <br /><br />
+        <button type="submit">Submit</button>
+      </form>
+      <br /><br />
+      <p id="errorMessage" style="display: none"></p>
+      <ul style="display: none" id="userDataDisplay">
+        <li class="userData"></li>
+        <li class="userData"></li>
+        <li class="userData"></li>
+        <li class="userData"></li>
+        <li class="userData"></li>
+      </ul>
+    </section>
     <!-- About-->
     <section class="page-section bg-primary" id="about">
       <div class="container px-4 px-lg-5">

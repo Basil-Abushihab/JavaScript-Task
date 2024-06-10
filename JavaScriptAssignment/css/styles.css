@@ -2449,6 +2449,10 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+#form{
+  display: inline;
+  
+}
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext {
   padding: 1rem 0.75rem;
